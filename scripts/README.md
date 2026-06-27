@@ -14,6 +14,7 @@ rm -rf docs
 cp -r /tmp/update_website docs
 git add .
 git commit -m "Update website"
+git push
 
 git switch main
 ```
