@@ -10,6 +10,7 @@ cp -r website /tmp/update_website
 git switch github-pages
 rm -rf docs
 cp -r /tmp/update_website docs
+rm -rf /tmp/update_website
 git add .
 git commit -m "Update website"
 git push
