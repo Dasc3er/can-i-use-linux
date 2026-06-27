@@ -97,7 +97,7 @@
         
         <div class="alert alert-info" role="alert">
             Remember to create a backup for your browser bookmarks and passwords too.
-            TODO: add more information.
+            This is usually available from the browser menu "File" -> "Export", but may vary depending on your browser.
         </div>
 
         <p><strong>You should also ensure your Windows license will be available for use later on, in case you ever need to revert back to Windows.</strong>. You can do so by checking the "Settings" -> "System Info" panel on Windows and the instructions at the <a href="https://support.microsoft.com/Windows/activation/activate-windows">official website</a>. If Windows was the default operating system provided to the device when sold by the original producer, then the Windows license is most likely stored and linked to the device and Windows can be reinstalled as needed without noting it down - <strong>but always double check this</strong>.</p>
@@ -196,7 +196,7 @@
         <ol>
             <li>1 USB device with at least 8GB of storage</li>
             <li>ISO image of the chosen distro</li>
-            <li><a href="https://rufus.ie/en/" target="_blank">Rufus software</a> (or others if you know about them) to write the image to the USB</li>
+            <li><a href="https://rufus.ie/en/" target="_blank">Rufus</a> (or <a href="https://etcher.balena.io" target="_blank">balenaEtcher</a>, or any other software if you know about them) to write the image to the USB</li>
         </ol>
         
         <p>Start by connecting the USB to your device, and checking <strong>it does not contain any data you need to keep - everything on it will be deleted</strong>. Then download Rufus and open it, select your ISO image via the interface and the USB image to write to, and start the process.</p>
@@ -251,7 +251,7 @@
             <li>Identify the keys "Esc", "F2", "F12" and "Del" of your keyboard</li>
                 <ul>
                     <li>Device and manufacturer may have variants, but one of the above generally work</li>
-                    <li>In the next step, you will need to click one or all of them repeatedly as soon as you power on the device. If you click 1 only and it is the wrong one, you will just get Windows again and need to try another by restarting. Clicking them all in parallel does not cause issues.</li>
+                    <li>In the next step, you will need to click one or all of them repeatedly as soon as you power on the device. If you click 1 only and it is the wrong one, you will just get Windows again and need to try another by restarting. Clicking them all in parallel does not cause issues, but may also not be recognized immediately so retries may be needed anyway.</li>
                 </ul>
             </li>
             <li>Power on the device and <strong>immediately start clicking the keys repeatedly</strong> until a different interface loads</li>
@@ -260,7 +260,7 @@
                     <li>Look for a "Boot" menu and "Boot Device Order/Priority" setting (names may vary a bit)</li>
                     <li>Follow the interface instructions to move the USB device before the hard disk</li>
                     <li>Look also for "UEFI Secure Boot Certificate" setting in the same section</li>
-                    <li>If it contains a "Windows" or "Microsoft" reference on it, look if there is another option for "Secure Boot Supported OS"</li>
+                    <li>If it contains a "Windows" or "Microsoft" reference on it, look if there is another option for "Secure Boot Supported OS" and select it if available</li>
                     <li><strong>Ensure you did not change anything else by error - if you are in doubt, you can always just exit without saving and starting this step by scratch</strong></li>
                     <li>Save and exit</li>
                 </ol>
@@ -289,6 +289,8 @@
         <h3>7. Install the operating system</h3>
 
         <p>You have chosen to install the Linux distribution you tested above. Now, you should be able to find an option on the start menu or desktop of the current system to install the distro.</p>
+
+        <p>A good overview with screenshots for Ubuntu is available <a href="https://ubuntu.com/tutorials/install-ubuntu-desktop?source=post_page-----96d0be38fc2b--------------------------------#4-boot-from-usb-flash-drive" target="_blank">here</a> as a simple refernce on what to expect.</p>
 
         <p>There is one main choice to do at this step which requires instruction: the choice of keeping Windows and add Linux in dual boot, or install Linux only. For non-advanced users, we reccomend to install Linux only.</p>
         
