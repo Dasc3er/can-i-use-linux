@@ -245,7 +245,7 @@
         <p><strong>Do not fear, as we will provide all relevant information and the procedure is safe.</strong></p>
 
         <p>In order:</p>
-        <ul>
+        <ol>
             <li>Shutdown your device</li>
             <li>Connect your USB device to the powered-off device</li>
             <li>Identify the keys "Esc", "F2", "F12" and "Del" of your keyboard</li>
@@ -256,24 +256,64 @@
             </li>
             <li>Power on the device and <strong>immediately start clicking the keys repeatedly</strong> until a different interface loads</li>
             <li>Device and manufacturer will have different interfaces, but <strong>without any urgency</strong>:
-                <ul>
-                    <li>Look for a "Boot" menu</li>
-                    <li>Look for a "Device Boot Order" setting</li>
+                <ol>
+                    <li>Look for a "Boot" menu and "Boot Device Order/Priority" setting (names may vary a bit)</li>
                     <li>Follow the interface instructions to move the USB device before the hard disk</li>
-                    <li>Look for "UEFI Secure Boot" setting in the same section</li>
-                    <li>If it contains a "Windows" or "Microsoft" reference on it, look if there is another option for ""</li>
+                    <li>Look also for "UEFI Secure Boot Certificate" setting in the same section</li>
+                    <li>If it contains a "Windows" or "Microsoft" reference on it, look if there is another option for "Secure Boot Supported OS"</li>
                     <li><strong>Ensure you did not change anything else by error - if you are in doubt, you can always just exit without saving and starting this step by scratch</strong></li>
                     <li>Save and exit</li>
-                </ul>
+                </ol>
             </li>
-            <li>The above step will enable the inserted USB to be usable as the startup point for your operating system, and the device will restart and use it for the next step to test and eventually install</li>
-        </ul>
+            <li>This will automatically restart the device and startup from the live USB for the next step</li>
+        </ol>
 
         <hr>
         <h3>6. Test the operating system without installing</h3>
 
+        <p>By following the previous step, the next device restart will automatically use the inserted live USB to startup. This will load the custom UI of the chosen distro on your device. <strong>Never remove the live USB from your device unless explicitly said by the device itself on the display.</strong></strong></p>
+
+        <p>Each distro will have slightly different interface, but you should generally see a language selector and options to "Try" or "Install" the distro.</p>
+
+        <p>
+            At this step, we want for you to experiment a bit with the chosen distro to verify you like it.
+            Please select "Try" and once the system loads, feel free to play around.
+            You should be able to connect to the internet and browse, and start using base applications available - installing new ones would not really be doable until you oficially switch to Linux, but feel free to look on the Software/Application center for examples, and more are available online!
+        </p>
+
+        <p>If you have any peculiar systems and components in your device you need for your daily life, you should also check they work correctly on this system, and eventually find some time to check online for any solutions.</p>
+
+        <p><strong>Once you are satisfied by your testing and want to proceed, go to the next step without restarting!</strong> If you want to go back to Windows, then find the shutdown menu and follow instructions.</p>
+
         <hr>
         <h3>7. Install the operating system</h3>
+
+        <p>You have chosen to install the Linux distribution you tested above. Now, you should be able to find an option on the start menu or desktop of the current system to install the distro.</p>
+
+        <p>There is one main choice to do at this step which requires instruction: the choice of keeping Windows and add Linux in dual boot, or install Linux only. For non-advanced users, we reccomend to install Linux only.</p>
+        
+        <p>After this choice, for the most part you just need to follow instructions on the UI and proceed with setup of your account.</p>
+
+        <div class="accordion" id="boot-choice">
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneBoot" aria-expanded="false" aria-controls="collapseOneBoot">
+                        Dual boot with Windows
+                    </button>
+                </h2>
+                <div id="collapseOneBoot" class="accordion-collapse collapse" data-bs-parent="#boot-choice">
+                    <div class="accordion-body">
+                        <p>You may want to keep both Windows and Linux on your device.</p>
+
+                        <p>If so, please note that you may always use 1 only at a time, and that you will need to keep some storage for both systems - you will practically reduce the available storage for your device. You will also be prompted at every device startup if you want to use the Linux distro or Windows.</p>
+                        
+                        <p>The procedure to do so is to simply use the installer UI and when prompted on how to install the Linux distro, choose a "dual-boot" option or the advanced option.</p>
+
+                        <p>The procedure may be easier on some distro than in others - you will need create a partition (limited storage of a specified number of GB) from the existing Windows partition, and then select the new partition as the place where Linux should be installed.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <hr>
         <h3>FAQs</h3>
