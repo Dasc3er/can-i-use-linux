@@ -6,11 +6,11 @@ This folder contains the actual website to publish.
 ## Website update
 
 ```bash
+rm -rf /tmp/update_website
 cp -r website /tmp/update_website
 git switch github-pages
 rm -rf docs
 cp -r /tmp/update_website docs
-rm -rf docs
 git add .
 git commit -m "Update website"
 git push
